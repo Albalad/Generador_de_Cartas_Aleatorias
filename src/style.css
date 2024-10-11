@@ -16,3 +16,10 @@
 .invertido {
   rotate: 180deg;
 }
+h1 {
+  font-size: 550%;
+}
+
+.numero {
+  font-size: 700%;
+}
