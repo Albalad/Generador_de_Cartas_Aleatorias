@@ -1,17 +1,18 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
-.pica {
-  color: black;
+.card {
+  width: 350px;
+  height: 500px;
 }
-.corazon {
+.palo {
+  width: 100%;
+  height: 100%;
+}
+
+.corazon h1.color {
   color: red;
 }
-.diamante {
-  color: red;
-}
-.trebol {
-  color: black;
-}
+
 .invertido {
   rotate: 180deg;
 }
