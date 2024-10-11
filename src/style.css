@@ -1,1 +1,17 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+.pica {
+  color: black;
+}
+.corazon {
+  color: red;
+}
+.diamante {
+  color: red;
+}
+.trebol {
+  color: black;
+}
+.invertido {
+  rotate: 180deg;
+}
