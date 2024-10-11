@@ -15,8 +15,6 @@ window.onload = function() {
   const figura = randomizador(paloCarta);
   if (figura === "♥" || figura === "♦") {
     carta.classList.add("corazon");
-  } else {
-    carta.classList.add("trebol");
   }
   document.querySelector(".figura1").innerHTML = figura;
   document.querySelector(".figura2").innerHTML = figura;

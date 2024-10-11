@@ -8,18 +8,11 @@
   width: 100%;
   height: 100%;
 }
-.pica h1.color {
-  color: black;
-}
+
 .corazon h1.color {
   color: red;
 }
-.diamante h1.color {
-  color: red;
-}
-.trebol h1.color {
-  color: black;
-}
+
 .invertido {
   rotate: 180deg;
 }
