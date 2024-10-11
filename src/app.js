@@ -12,4 +12,13 @@ const randomizador = arr => arr[Math.floor(Math.random() * arr.length)];
 window.onload = function() {
   //write your code here
   const carta = document.querySelector(".card");
+  const figura = randomizador(paloCarta);
+  if (figura === "♥" || figura === "♦") {
+    carta.classList.add("corazon");
+  } else {
+    carta.classList.add("trebol");
+  }
+  document.querySelector(".figura1").innerHTML = figura;
+  document.querySelector(".figura2").innerHTML = figura;
+  document.querySelector(".numero").innerHTML = randomizador(valorCarta);
 };
