@@ -1,15 +1,23 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
-.pica {
+.card {
+  width: 350px;
+  height: 500px;
+}
+.palo {
+  width: 100%;
+  height: 100%;
+}
+.pica h1.color {
   color: black;
 }
-.corazon {
+.corazon h1.color {
   color: red;
 }
-.diamante {
+.diamante h1.color {
   color: red;
 }
-.trebol {
+.trebol h1.color {
   color: black;
 }
 .invertido {
