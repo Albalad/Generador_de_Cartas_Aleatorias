@@ -11,12 +11,27 @@ const randomizador = arr => arr[Math.floor(Math.random() * arr.length)];
 
 window.onload = function() {
   //write your code here
-  const carta = document.querySelector(".card");
-  const figura = randomizador(paloCarta);
-  if (figura === "♥" || figura === "♦") {
-    carta.classList.add("corazon");
-  }
-  document.querySelector(".figura1").innerHTML = figura;
-  document.querySelector(".figura2").innerHTML = figura;
-  document.querySelector(".numero").innerHTML = randomizador(valorCarta);
+  const cartaAleatoria = () => {
+    //establecemos la constante carta para llamar al div con clase card
+    const carta = document.querySelector(".card");
+
+    //establecemos la constante figura para dar un valor aleatorio al palo de la carta
+    const figura = randomizador(paloCarta);
+
+    //establecemos que dependiendo la figura, las debe poner de un color u otro
+    if (figura === "♥" || figura === "♦") {
+      carta.classList.add("corazon");
+    }
+
+    //imprimimos el palo aleatorio de la carta en sus dos esquinas
+    document.querySelector(".figura1").innerHTML = figura;
+    document.querySelector(".figura2").innerHTML = figura;
+
+    //imprimimos en el div con clase numero un numero aleatorio del array valorCarta
+    document.querySelector(".numero").innerHTML = randomizador(valorCarta);
+  };
+  const boton = document.getElementById("actualizador");
+  boton.addEventListener("click", () => {
+    cartaAleatoria();
+  });
 };
