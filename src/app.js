@@ -9,6 +9,12 @@ const valorCarta = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
 const paloCarta = ["♦", "♥", "♠", "♣"];
 const randomizador = arr => arr[Math.floor(Math.random() * arr.length)];
 
+const boton = document.getElementById("actualizador");
+
+let ancho = document.getElementById("ancho");
+let alto = document.getElementById("alto");
+const boton2 = document.getElementById("medidas");
+
 window.onload = function() {
   //write your code here
   const cartaAleatoria = () => {
@@ -35,10 +41,25 @@ window.onload = function() {
 
   cartaAleatoria();
 
-  const boton = document.getElementById("actualizador");
   boton.addEventListener("click", () => {
     cartaAleatoria();
   });
 
   setInterval(cartaAleatoria, 10000);
+
+  boton2.addEventListener("click", () => {
+    const carta = document.getElementById("carta");
+
+    const fontSizeFigura1 = document.getElementById("figura1");
+    const fontSizeNumero = document.getElementById("numero");
+    const fontSizeFigura2 = document.getElementById("figura2");
+
+    carta.style.width = `${ancho.value}px`;
+    carta.style.height = `${alto.value}px`;
+
+    const fontsize = (alto.value * 100) / 500;
+    fontSizeFigura1.style.fontSize = `${fontsize}px`;
+    fontSizeNumero.style.fontSize = `${fontsize}px`;
+    fontSizeFigura2.style.fontSize = `${fontsize}px`;
+  });
 };
