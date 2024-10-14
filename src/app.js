@@ -21,6 +21,8 @@ window.onload = function() {
     //establecemos que dependiendo la figura, las debe poner de un color u otro
     if (figura === "♥" || figura === "♦") {
       carta.classList.add("corazon");
+    } else {
+      carta.classList.remove("corazon");
     }
 
     //imprimimos el palo aleatorio de la carta en sus dos esquinas
@@ -30,6 +32,9 @@ window.onload = function() {
     //imprimimos en el div con clase numero un numero aleatorio del array valorCarta
     document.querySelector(".numero").innerHTML = randomizador(valorCarta);
   };
+
+  cartaAleatoria();
+
   const boton = document.getElementById("actualizador");
   boton.addEventListener("click", () => {
     cartaAleatoria();

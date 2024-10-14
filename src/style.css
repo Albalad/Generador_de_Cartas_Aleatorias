@@ -13,6 +13,10 @@
   color: red;
 }
 
+.pica h1.color {
+  color: black;
+}
+
 .invertido {
   rotate: 180deg;
 }
