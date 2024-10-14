@@ -34,4 +34,6 @@ window.onload = function() {
   boton.addEventListener("click", () => {
     cartaAleatoria();
   });
+
+  setInterval(cartaAleatoria, 10000);
 };
