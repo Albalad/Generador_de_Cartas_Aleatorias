@@ -50,13 +50,16 @@ window.onload = function() {
   boton2.addEventListener("click", () => {
     const carta = document.getElementById("carta");
 
+    //hacemos que la el elemento con id carta recoga los estilos introducidos de alto y ancho
+    carta.style.width = `${ancho.value}px`;
+    carta.style.height = `${alto.value}px`;
+
+    //recogemos los datos del numero y las figuras de la carta
     const fontSizeFigura1 = document.getElementById("figura1");
     const fontSizeNumero = document.getElementById("numero");
     const fontSizeFigura2 = document.getElementById("figura2");
 
-    carta.style.width = `${ancho.value}px`;
-    carta.style.height = `${alto.value}px`;
-
+    //hacemos que el fonSize de numero y figuras de la carta se redimensionen acuerdo al alto de la carta
     const fontsize = (alto.value * 100) / 500;
     fontSizeFigura1.style.fontSize = `${fontsize}px`;
     fontSizeNumero.style.fontSize = `${fontsize}px`;
