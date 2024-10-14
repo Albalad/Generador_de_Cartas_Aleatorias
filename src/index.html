@@ -13,17 +13,31 @@
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body class="bg-success">
+    <div class="m-3">
+      <label for="alto">Alto:</label>
+      <input type="number" class="alto ms-3" id="alto" placeholder="alto" />
+    </div>
+    <div class="m-3">
+      <label for="ancho">Ancho:</label>
+      <input type="number" class="ancho" id="ancho" placeholder="ancho" />
+    </div>
+    <div class="ms-3">
+      <button type="submit" class="btn btn-primary mb-3" id="medidas">
+        Establezca el alto y ancho (px)
+      </button>
+    </div>
     <div
       class="position-absolute top-50 start-50 translate-middle card corazon"
+      id="carta"
     >
-      <div class="position-relative top-0 start-0 palo">
-        <h1 class="color figura1">♦</h1>
+      <div class="justify-content-start palo">
+        <h1 class="color figura1" id="figura1">♦</h1>
       </div>
       <div class="position-absolute top-50 start-50 translate-middle">
-        <h1 class="numero">3</h1>
+        <h1 class="numero" id="numero">3</h1>
       </div>
-      <div class="position-relative bottom-0 end-0 invertido palo mb-0">
-        <h1 class="color figura2 mb-0">♦</h1>
+      <div class="justify-content-end invertido palo">
+        <h1 class="color figura2" id="figura2">♦</h1>
       </div>
     </div>
     <button

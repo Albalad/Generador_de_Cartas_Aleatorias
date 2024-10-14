@@ -5,6 +5,10 @@
   height: 500px;
 }
 
+label {
+  color: yellow;
+}
+
 .palo {
   width: 100%;
   height: 100%;
@@ -14,18 +18,10 @@
   color: red;
 }
 
-.pica h1.color {
-  color: black;
-}
-
 .invertido {
   rotate: 180deg;
 }
 
 h1 {
-  font-size: 550%;
-}
-
-.numero {
-  font-size: 700%;
+  font-size: 100px;
 }
