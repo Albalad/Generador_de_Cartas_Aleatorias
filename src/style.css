@@ -3,6 +3,8 @@
 .card {
   width: 350px;
   height: 500px;
+  max-width: 1500px;
+  max-height: 700px;
 }
 
 label {

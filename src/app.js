@@ -49,10 +49,18 @@ window.onload = function() {
 
   boton2.addEventListener("click", () => {
     const carta = document.getElementById("carta");
+    const width = ancho.value;
+    const height = alto.value;
 
-    //hacemos que la el elemento con id carta recoga los estilos introducidos de alto y ancho
-    carta.style.width = `${ancho.value}px`;
-    carta.style.height = `${alto.value}px`;
+    if (height > 700 || width > 1500) {
+      alert(
+        "El alto no puede ser mayor de 700 y el ancho no puede ser mayor de 1500"
+      );
+    } else {
+      //hacemos que la el elemento con id carta recoga los estilos introducidos de alto y ancho
+      carta.style.width = `${width}px`;
+      carta.style.height = `${height}px`;
+    }
 
     //recogemos los datos del numero y las figuras de la carta
     const fontSizeFigura1 = document.getElementById("figura1");
