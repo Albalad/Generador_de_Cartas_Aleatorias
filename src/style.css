@@ -5,6 +5,8 @@
   height: 500px;
   max-width: 1500px;
   max-height: 700px;
+  min-width: 50px;
+  min-height: 50px;
 }
 
 label {

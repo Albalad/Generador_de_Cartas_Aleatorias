@@ -52,25 +52,25 @@ window.onload = function() {
     const width = ancho.value;
     const height = alto.value;
 
-    if (height > 700 || width > 1500) {
+    if (height > 700 || width > 1500 || height < 50 || width < 50) {
       alert(
-        "El alto no puede ser mayor de 700 y el ancho no puede ser mayor de 1500"
+        "El alto no puede ser mayor de 700 ni menor de 50 y el ancho no puede ser mayor de 1500 ni menor de 50"
       );
     } else {
       //hacemos que la el elemento con id carta recoga los estilos introducidos de alto y ancho
       carta.style.width = `${width}px`;
       carta.style.height = `${height}px`;
+
+      //recogemos los datos del numero y las figuras de la carta
+      const fontSizeFigura1 = document.getElementById("figura1");
+      const fontSizeNumero = document.getElementById("numero");
+      const fontSizeFigura2 = document.getElementById("figura2");
+
+      //hacemos que el fonSize de numero y figuras de la carta se redimensionen acuerdo al alto de la carta
+      const fontsize = (alto.value * 100) / 500;
+      fontSizeFigura1.style.fontSize = `${fontsize}px`;
+      fontSizeNumero.style.fontSize = `${fontsize}px`;
+      fontSizeFigura2.style.fontSize = `${fontsize}px`;
     }
-
-    //recogemos los datos del numero y las figuras de la carta
-    const fontSizeFigura1 = document.getElementById("figura1");
-    const fontSizeNumero = document.getElementById("numero");
-    const fontSizeFigura2 = document.getElementById("figura2");
-
-    //hacemos que el fonSize de numero y figuras de la carta se redimensionen acuerdo al alto de la carta
-    const fontsize = (alto.value * 100) / 500;
-    fontSizeFigura1.style.fontSize = `${fontsize}px`;
-    fontSizeNumero.style.fontSize = `${fontsize}px`;
-    fontSizeFigura2.style.fontSize = `${fontsize}px`;
   });
 };
